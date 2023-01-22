@@ -2,10 +2,10 @@ import { hideLoading, showLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
 
 const ActionType = {
-  RECEIVE_THREADS: 'RECEIVE_THREADS',
-  ADD_THREAD: 'ADD_THREAD',
-  TOGGLE_UP_VOTE_THREAD: 'TOGGLE_UP_VOTE_THREAD',
-  TOGGLE_DOWN_VOTE_THREAD: 'TOGGLE_DOWN_VOTE_THREAD',
+  RECEIVE_THREADS: 'threads/receive',
+  ADD_THREAD: 'thread/add',
+  TOGGLE_UP_VOTE_THREAD: 'thread/toggleUpVote',
+  TOGGLE_DOWN_VOTE_THREAD: 'thread/toggleDownVote',
 };
 
 function receiveThreadsActionCreator(threads) {
@@ -106,6 +106,7 @@ function asyncDownVoteThread(threadId) {
 export {
   ActionType,
   receiveThreadsActionCreator,
+  addThreadActionCreator,
   toggleUpVoteThreadActionCreator,
   toggleDownVoteThreadActionCreator,
   asyncCreateThread,

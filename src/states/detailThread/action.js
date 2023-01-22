@@ -1,13 +1,13 @@
-const { showLoading, hideLoading } = require('react-redux-loading-bar');
-const { default: api } = require('../../utils/api');
+import { showLoading, hideLoading } from 'react-redux-loading-bar';
+import api from '../../utils/api';
 
 const ActionType = {
-  RECEIVE_DETAIL_THREAD: 'RECEIVE_DETAIL_THREAD',
-  TOGGLE_UP_VOTE_DETAIL_THREAD: 'TOGGLE_UP_VOTE_DETAIL_THREAD',
-  TOGGLE_DOWN_VOTE_DETAIL_THREAD: 'TOGGLE_DOWN_VOTE_DETAIL_THREAD',
-  ADD_COMMENT: 'ADD_COMMENT',
-  TOGGLE_UP_VOTE_COMMENT: 'TOGGLE_UP_VOTE_COMMENT',
-  TOGGLE_DOWN_VOTE_COMMENT: 'TOGGLE_DOWN_VOTE_COMMENT',
+  RECEIVE_DETAIL_THREAD: 'detailThread/receive',
+  TOGGLE_UP_VOTE_DETAIL_THREAD: 'detailThread/toggleUpVote',
+  TOGGLE_DOWN_VOTE_DETAIL_THREAD: 'detailThread/toggleDownVote',
+  ADD_COMMENT: 'comment/add',
+  TOGGLE_UP_VOTE_COMMENT: 'comment/toggleUpVote',
+  TOGGLE_DOWN_VOTE_COMMENT: 'comment/toggleDownVote',
 };
 
 function receiveDetailThreadActionCreator(detailThread) {

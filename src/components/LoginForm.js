@@ -28,7 +28,6 @@ function LoginForm({ onLogin }) {
           type="email"
           label="Email"
           placeholder="Masukkan email"
-          required
           value={enteredEmail}
           onChangeHandler={emailChangeHandler}
         />
@@ -38,7 +37,6 @@ function LoginForm({ onLogin }) {
           type="password"
           label="Password"
           placeholder="Masukkan password"
-          required
           value={enteredPassword}
           onChangeHandler={passwordChangeHandler}
         />
