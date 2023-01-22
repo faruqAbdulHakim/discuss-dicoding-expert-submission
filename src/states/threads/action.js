@@ -106,6 +106,7 @@ function asyncDownVoteThread(threadId) {
 export {
   ActionType,
   receiveThreadsActionCreator,
+  addThreadActionCreator,
   toggleUpVoteThreadActionCreator,
   toggleDownVoteThreadActionCreator,
   asyncCreateThread,

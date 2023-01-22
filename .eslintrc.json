@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -22,7 +23,10 @@
         "no-alert": "off",
         "no-unused-vars": "warn",
         "linebreak-style": "off",
+        "no-underscore-dangle": "off",
         "import/no-extraneous-dependencies": "off",
+        "react/function-component-definition": "off",
+        "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": "off"
     }
 }

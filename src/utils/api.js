@@ -158,8 +158,8 @@ const api = (() => {
       throw new Error(message);
     }
 
-    const { data } = responseJson;
-    return { data };
+    const { data: { vote } } = responseJson;
+    return { vote };
   };
 
   const downVoteThread = async (threadId) => {
@@ -173,8 +173,8 @@ const api = (() => {
       throw new Error(message);
     }
 
-    const { data } = responseJson;
-    return { data };
+    const { data: { vote } } = responseJson;
+    return { vote };
   };
 
   const neutralizeVoteThread = async (threadId) => {
@@ -188,8 +188,8 @@ const api = (() => {
       throw new Error(message);
     }
 
-    const { data } = responseJson;
-    return { data };
+    const { data: { vote } } = responseJson;
+    return { vote };
   };
 
   const upVoteComment = async (threadId, commentId) => {
@@ -203,8 +203,8 @@ const api = (() => {
       throw new Error(message);
     }
 
-    const { data } = responseJson;
-    return { data };
+    const { data: { vote } } = responseJson;
+    return { vote };
   };
   const downVoteComment = async (threadId, commentId) => {
     const response = await fetchWithToken(`${BASE_URL}/threads/${threadId}/comments/${commentId}/down-vote`, {
@@ -217,8 +217,8 @@ const api = (() => {
       throw new Error(message);
     }
 
-    const { data } = responseJson;
-    return { data };
+    const { data: { vote } } = responseJson;
+    return { vote };
   };
   const neutralizeVoteComment = async (threadId, commentId) => {
     const response = await fetchWithToken(`${BASE_URL}/threads/${threadId}/comments/${commentId}/neutral-vote`, {
@@ -231,8 +231,8 @@ const api = (() => {
       throw new Error(message);
     }
 
-    const { data } = responseJson;
-    return { data };
+    const { data: { vote } } = responseJson;
+    return { vote };
   };
 
   const getLeaderboards = async () => {

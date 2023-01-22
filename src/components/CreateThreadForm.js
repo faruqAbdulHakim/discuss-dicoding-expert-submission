@@ -46,7 +46,7 @@ function CreateThreadForm() {
   return (
     <Card className="bg-white my-2 p-4">
       <h2 className="text-xl font-semibold">Tulis</h2>
-      <form onSubmit={submitHandler} className="py-2">
+      <form data-testid="create-thread-form" onSubmit={submitHandler} className="py-2">
         <Input
           type="text"
           name="title"
