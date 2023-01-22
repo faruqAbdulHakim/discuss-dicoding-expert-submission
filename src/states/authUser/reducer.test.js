@@ -2,7 +2,7 @@ import authUserReducer from './reducer';
 
 describe('authUserReducer function', () => {
   it('should return the initial state if given unknown action', () => {
-    const initialState = [];
+    const initialState = null;
     const action = { type: 'unknown' };
 
     const nextState = authUserReducer(initialState, action);
@@ -11,7 +11,7 @@ describe('authUserReducer function', () => {
   });
 
   it('should return the authUser if given by authUser/set action', () => {
-    const initialState = [];
+    const initialState = null;
     const action = {
       type: 'authUser/set',
       payload: {
@@ -28,7 +28,7 @@ describe('authUserReducer function', () => {
   });
 
   it('should return null if given by authUser/unset action', () => {
-    const initialState = [];
+    const initialState = null;
     const action = { type: 'authUser/unset' };
 
     const nextState = authUserReducer(initialState, action);
