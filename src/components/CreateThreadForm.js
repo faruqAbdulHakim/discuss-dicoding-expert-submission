@@ -57,7 +57,7 @@ function CreateThreadForm() {
         <Input
           type="text"
           name="title"
-          placeholder="Masukkan Kategori..."
+          placeholder="Masukkan kategori..."
           value={enteredCategory}
           onChangeHandler={categoryChangeHandler}
         />

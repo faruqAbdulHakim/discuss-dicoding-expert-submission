@@ -19,8 +19,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "e2e": "cypress run",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "ci:test": "react-scripts test --watchAll=false && start-server-and-test start http-get://0.0.0.0:3000 e2e"
   },
   "eslintConfig": {
     "extends": [
@@ -72,6 +74,7 @@
     "cypress": "^12.3.0",
     "eslint": "^8.31.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.27.4",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.0",
@@ -79,6 +82,7 @@
     "eslint-plugin-storybook": "^0.6.10",
     "jest": "^27.5.1",
     "postcss": "^8.4.21",
+    "start-server-and-test": "^1.15.2",
     "tailwindcss": "^3.2.4",
     "webpack": "^5.75.0"
   }

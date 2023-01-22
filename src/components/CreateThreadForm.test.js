@@ -21,6 +21,10 @@ Wrapper.propTypes = {
 
 describe('CreateThreadForm component', () => {
   it('should not render the form if user not authed', () => {
+    store.dispatch({
+      type: 'authUser/unset',
+    });
+
     render(
       <Wrapper>
         <CreateThreadForm />
@@ -53,17 +57,5 @@ describe('CreateThreadForm component', () => {
     const form = screen.queryByTestId('create-thread-form');
 
     expect(form).toBeInTheDocument();
-  });
-
-  it('should not render the form if user not authed 2', () => {
-    render(
-      <Wrapper>
-        <CreateThreadForm />
-      </Wrapper>,
-    );
-
-    const form = screen.queryByTestId('create-thread-form');
-
-    expect(form).toBeNull();
   });
 });
