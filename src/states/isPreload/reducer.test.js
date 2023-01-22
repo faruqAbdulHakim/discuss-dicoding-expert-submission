@@ -7,7 +7,7 @@ describe('isPreloadReducer function', () => {
 
     const nextState = isPreloadReducer(initialState, action);
 
-    expect(nextState).toBe(null);
+    expect(nextState).toEqual(initialState);
   });
 
   it('should return isPreload if given by isPreload/set action', () => {
